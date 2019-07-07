@@ -1,0 +1,4 @@
+#Sun Jul 07 22:13:19 NZST 2019
+base.0=/Users/liem.vo/Documents/Studying/Programming/Flutter/git/day1_flutter_hitme/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
