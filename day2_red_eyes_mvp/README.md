@@ -1,6 +1,6 @@
 # day2_red_eyes_mvp
 
-A new Flutter project.
+MVP of [day1 red eyes](https://github.com/liemvo/100daysofflutter/tree/master/day1_red_eyes)
 
 ## Getting Started
 
