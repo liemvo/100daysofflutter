@@ -1,11 +1,12 @@
+import 'package:day2_red_eyes_mvp/page/model.dart';
 import 'package:flutter/material.dart';
 
 class ColorSlider extends StatefulWidget {
   double guess;
   final Color color;
-  final Function updateValue;
+  final Function updateColor;
 
-  ColorSlider({Key key, this.guess, this.color, this.updateValue}) : super(key: key);
+  ColorSlider({Key key, this.guess, this.color, this.updateColor}) : super(key: key);
 
   @override
   _ColorSliderState createState() => _ColorSliderState();
@@ -28,7 +29,7 @@ class _ColorSliderState extends State<ColorSlider> {
                 max: 1.0,
                 onChanged: (newValue){
                   setState(() {
-                    widget.updateValue(newValue, widget.color);
+                    widget.updateColor(newValue, getSlideType(widget.color));
                   });
                 },
               ),
@@ -38,4 +39,17 @@ class _ColorSliderState extends State<ColorSlider> {
         ),
     );
   }
+}
+
+
+SlideType getSlideType(Color color) {
+  SlideType type;  
+  if (color == Colors.red) {
+    type = SlideType.RSlide;
+  } else if (color == Colors.green) {
+    type = SlideType.GSlide;
+  } else {
+    type = SlideType.BSlide;
+  }
+  return type;
 }
